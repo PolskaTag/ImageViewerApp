@@ -18,6 +18,7 @@ public class SelectionActivity extends AppCompatActivity {
     Spinner spinner;
     int[] galaxyImageArray;
     private final int REQUEST_MAIN_CODE = 1;
+    boolean firstTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class SelectionActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("SelectionActivity");
 
         spinner = findViewById(R.id.spinner);
+        firstTime = true;
 
         ArrayList galaxyArray = new ArrayList<String>();
         galaxyArray.add("Andromeda");
@@ -41,11 +43,15 @@ public class SelectionActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(firstTime){
+                    firstTime = false;
+                    return;
+                }
 //                String name = galaxyArray.get(position).toString();
                 Intent launchIntent = new Intent(SelectionActivity.this, DisplayActivity.class);
-//                launchIntent.putExtra(galaxyArray.get(position), galaxyImageArray[position]);
                 launchIntent.putExtra("imageName", galaxyArray.get(position).toString());
                 launchIntent.putExtra("imageVal", galaxyImageArray[position]);
+//                launchIntent.putExtra("imageVal", 45);
                 startActivity(launchIntent);
             }
 
