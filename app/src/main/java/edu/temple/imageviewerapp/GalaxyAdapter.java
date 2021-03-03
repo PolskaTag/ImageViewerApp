@@ -29,7 +29,7 @@ public class GalaxyAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return items.size();
+        return items.size() - 1;
     }
 
     @Override
@@ -46,7 +46,12 @@ public class GalaxyAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         TextView textView = new TextView(context);
-        textView.setText(items.get(position));
+//        if(position == getCount()){
+//            textView.setText(items.get(position));
+//        }
+
+        // The view will always read out the hint text - which is the last inserted caption in array
+        textView.setText(items.get(getCount()));
 
         textView.setPadding(10,10,10,10);
         textView.setTextSize(25);

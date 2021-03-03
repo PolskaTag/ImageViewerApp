@@ -35,10 +35,12 @@ public class SelectionActivity extends AppCompatActivity {
         galaxyArray.add("Black Eye");
         galaxyArray.add("Milky Way");
         galaxyArray.add("Sombrero");
+        galaxyArray.add("Select a Galaxy!");
         galaxyImageArray = new int[]{R.drawable.andromeda, R.drawable.blackeye, R.drawable.milkyway, R.drawable.sombrero};
 
         GalaxyAdapter adapter = new GalaxyAdapter(this, galaxyArray, galaxyImageArray);
         spinner.setAdapter(adapter);
+        spinner.setSelection(adapter.getCount());
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
