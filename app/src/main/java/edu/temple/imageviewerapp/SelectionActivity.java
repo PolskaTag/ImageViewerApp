@@ -2,6 +2,7 @@ package edu.temple.imageviewerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,11 +17,14 @@ public class SelectionActivity extends AppCompatActivity {
     ImageView imageView;
     Spinner spinner;
     int[] galaxyImageArray;
+    private final int REQUEST_MAIN_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setTitle("SelectionActivity");
 
         spinner = findViewById(R.id.spinner);
 
@@ -37,7 +41,12 @@ public class SelectionActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                showPicture(position);
+//                String name = galaxyArray.get(position).toString();
+                Intent launchIntent = new Intent(SelectionActivity.this, DisplayActivity.class);
+//                launchIntent.putExtra(galaxyArray.get(position), galaxyImageArray[position]);
+                launchIntent.putExtra("imageName", galaxyArray.get(position).toString());
+                launchIntent.putExtra("imageVal", galaxyImageArray[position]);
+                startActivity(launchIntent);
             }
 
             @Override
@@ -47,7 +56,4 @@ public class SelectionActivity extends AppCompatActivity {
         });
     }
 
-    private void showPicture(int position){
-        imageView.setImageResource(galaxyImageArray[position]);
-    }
 }
