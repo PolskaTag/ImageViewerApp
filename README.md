@@ -1,5 +1,5 @@
 # ImageViewerApp
-### Assignment 4 CIS 3515 - Philip Lapinski
+### Assignment 4-5 CIS 3515 - Philip Lapinski
 
 ## What it's about:
 This assignment builds upon our previous **spinner assignment**. We can refactor what was done in the old assignment to create new a new featuring
