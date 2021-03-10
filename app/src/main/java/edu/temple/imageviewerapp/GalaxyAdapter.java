@@ -63,26 +63,28 @@ public class GalaxyAdapter extends BaseAdapter {
         */
         TextView textView;
 
-        RelativeLayout relativeLayout;
+        LinearLayout linearLayout;
 
         // Recycler pattern
         if(convertView == null){
-            relativeLayout = new RelativeLayout(context);
+            linearLayout = new LinearLayout(context);
             textView = new TextView(context);
             textView.setTextSize(20);
-            relativeLayout.addView(textView);
+            linearLayout.addView(textView);
         } else {
-            relativeLayout = (RelativeLayout) convertView;
-            textView = (TextView) relativeLayout.getChildAt(0);
+            linearLayout = (LinearLayout) convertView;
+            textView = (TextView) linearLayout.getChildAt(0);
         }
 
-        relativeLayout.setBackgroundResource(imageRes[position]);
+        linearLayout.setBackgroundResource(imageRes[position]);
         textView.setText(items.get(position));
-        textView.setGravity(Gravity.CENTER);
+        textView.setGravity(Gravity.CENTER_HORIZONTAL);
         textView.setTextColor(Color.WHITE);
-        relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(300,300));
+        textView.setShadowLayer(3, 3, 3, Color.BLACK);
+        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(300,300));
+        linearLayout.setGravity(Gravity.CENTER);
 
-        return relativeLayout;
+        return linearLayout;
     }
 
 //    @Override
