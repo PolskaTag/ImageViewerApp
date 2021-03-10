@@ -62,7 +62,6 @@ public class GalaxyAdapter extends BaseAdapter {
         return textView;
         */
         TextView textView;
-        ImageView imageView;
 
         RelativeLayout relativeLayout;
 
@@ -70,28 +69,19 @@ public class GalaxyAdapter extends BaseAdapter {
         if(convertView == null){
             relativeLayout = new RelativeLayout(context);
             textView = new TextView(context);
-//            imageView = new ImageView(context);
             textView.setTextSize(20);
-//            textView.setPadding(10,10,10,10);
-//            linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-//            relativeLayout.addView(imageView);
             relativeLayout.addView(textView);
-//            imageView.getLayoutParams().height = 300;
-//            imageView.getLayoutParams().width = 300;
         } else {
             relativeLayout = (RelativeLayout) convertView;
-//            imageView = (ImageView) relativeLayout.getChildAt(0);
             textView = (TextView) relativeLayout.getChildAt(0);
         }
 
-//        imageView.setImageResource(imageRes[position]);
         relativeLayout.setBackgroundResource(imageRes[position]);
         textView.setText(items.get(position));
-        textView.setGravity(Gravity.CENTER_VERTICAL);
+        textView.setGravity(Gravity.CENTER);
         textView.setTextColor(Color.WHITE);
         relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(300,300));
-//        relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(100,100));
-//        relativeLayout.setGravity(Gravity.FILL_HORIZONTAL);
+
         return relativeLayout;
     }
 

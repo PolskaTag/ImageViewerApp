@@ -36,8 +36,16 @@ public class SelectionActivity extends AppCompatActivity {
         galaxyArray.add("Black Eye");
         galaxyArray.add("Milky Way");
         galaxyArray.add("Sombrero");
+        galaxyArray.add("NGC 1365");
+        galaxyArray.add("NGC 1792");
+        galaxyArray.add("NGC 2336");
+        galaxyArray.add("NGC 5585");
+        galaxyArray.add("Unknown");
 //        galaxyArray.add("Select a Galaxy!");
-        galaxyImageArray = new int[]{R.drawable.andromeda, R.drawable.blackeye, R.drawable.milkyway, R.drawable.sombrero};
+        galaxyImageArray = new int[]{
+                R.drawable.andromeda, R.drawable.blackeye, R.drawable.milkyway,
+                R.drawable.sombrero, R.drawable.ngc1365, R.drawable.ngc1792,
+                R.drawable.ngc2336, R.drawable.ngc5585, R.drawable.unknown};
 
         GalaxyAdapter adapter = new GalaxyAdapter(this, galaxyArray, galaxyImageArray);
         gridView.setAdapter(adapter);
