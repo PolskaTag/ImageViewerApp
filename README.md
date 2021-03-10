@@ -28,8 +28,7 @@ as well as common practice for app upkeep. **Reference canvas for section 2**.
 
 Selection Activity           |  Display Activity
 :-------------------------:|:-------------------------:
-![image](https://user-images.githubusercontent.com/41872747/110686688-b15e3a80-81ad-11eb-9956-ecf0e4bc1682.png)
-  |  ![image](https://user-images.githubusercontent.com/41872747/110687012-0a2dd300-81ae-11eb-98d8-494ca3abbd8b.png)
+![image](https://user-images.githubusercontent.com/41872747/110686688-b15e3a80-81ad-11eb-9956-ecf0e4bc1682.png) | ![image](https://user-images.githubusercontent.com/41872747/110687012-0a2dd300-81ae-11eb-98d8-494ca3abbd8b.png)
 
 
 
