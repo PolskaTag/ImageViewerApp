@@ -10,5 +10,6 @@
     <string name="umbra">Ombre</string>
     <string name="inertia">Inertie</string>
     <string name="equinox">Équinoxe</string>
-    <string name="solstice">Solstice</string>
+    <string name="selection_activity">"Activité de sélection "</string>
+    <string name="display_activity">"Afficher l'activité "</string>
 </resources>

@@ -20,7 +20,7 @@ public class DisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
-        getSupportActionBar().setTitle("DisplayActivity");
+        getSupportActionBar().setTitle(R.string.display_activity);
 
         imageView = findViewById(R.id.imageView);
         textView = findViewById(R.id.textView);

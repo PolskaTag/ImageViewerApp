@@ -13,7 +13,7 @@
         android:layout_marginStart="175dp"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="175dp"
-        android:text="Select an Item!"
+        android:text="@string/select_directions"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

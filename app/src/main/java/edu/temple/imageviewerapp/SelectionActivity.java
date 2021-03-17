@@ -28,8 +28,11 @@ public class SelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("SelectionActivity");
+        // Inititialize our resources
         Resources res = getResources();
+
+        getSupportActionBar().setTitle(R.string.selection_activity);
+
 
         gridView = findViewById(R.id.gridView);
         firstTime = true;

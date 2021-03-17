@@ -20,5 +20,7 @@
     <string name="umbra">Umbra</string>
     <string name="inertia">Inertia</string>
     <string name="equinox">Equinox</string>
-    <string name="solstice">Solstice</string>
+    <string name="solstice" translatable="false">Solstice</string>
+    <string name="selection_activity">Selection Activity</string>
+    <string name="display_activity">Display Activity</string>
 </resources>
