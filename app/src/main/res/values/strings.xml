@@ -1,15 +1,24 @@
 <resources>
     <string-array name="galaxies">
-        <item>Andromeda</item>
-        <item>Black Eye</item>
-        <item>Milky Way</item>
-        <item>Rocket</item>
-        <item>Nebula</item>
-        <item>Umbra</item>
-        <item>Inertia</item>
-        <item>Equinox</item>
-        <item>Solstice</item>
+        <item>@string/andromeda</item>
+        <item>@string/black_eye</item>
+        <item>@string/milky_way</item>
+        <item>@string/rocket</item>
+        <item>@string/nebula</item>
+        <item>@string/umbra</item>
+        <item>@string/inertia</item>
+        <item>@string/equinox</item>
+        <item>@string/solstice</item>
     </string-array>
     <string name="app_name">ImageViewerApp</string>
     <string name="select_directions">Select an Item!</string>
+    <string name="andromeda">Andromeda</string>
+    <string name="black_eye">Black Eye</string>
+    <string name="milky_way">Milky Way</string>
+    <string name="rocket">Rocket</string>
+    <string name="nebula">Nebula</string>
+    <string name="umbra">Umbra</string>
+    <string name="inertia">Inertia</string>
+    <string name="equinox">Equinox</string>
+    <string name="solstice">Solstice</string>
 </resources>
