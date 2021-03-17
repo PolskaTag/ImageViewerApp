@@ -3,6 +3,7 @@ package edu.temple.imageviewerapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +21,7 @@ public class SelectionActivity extends AppCompatActivity {
     int[] galaxyImageArray;
     private final int REQUEST_MAIN_CODE = 1;
     boolean firstTime;
+    String[] galaxies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +29,15 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setTitle("SelectionActivity");
+        Resources res = getResources();
 
         gridView = findViewById(R.id.gridView);
         firstTime = true;
 
+        // Import galaxy array
+        galaxies = res.getStringArray(R.array.galaxies);
+
+        /*
         ArrayList galaxyArray = new ArrayList<String>();
         galaxyArray.add("Andromeda");
         galaxyArray.add("Black Eye");
@@ -41,13 +48,15 @@ public class SelectionActivity extends AppCompatActivity {
         galaxyArray.add("NGC 2336");
         galaxyArray.add("NGC 5585");
         galaxyArray.add("Unknown");
+         */
+
 //        galaxyArray.add("Select a Galaxy!");
         galaxyImageArray = new int[]{
                 R.drawable.andromeda, R.drawable.blackeye, R.drawable.milkyway,
                 R.drawable.sombrero, R.drawable.ngc1365, R.drawable.ngc1792,
                 R.drawable.ngc2336, R.drawable.ngc5585, R.drawable.unknown};
 
-        GalaxyAdapter adapter = new GalaxyAdapter(this, galaxyArray, galaxyImageArray);
+        GalaxyAdapter adapter = new GalaxyAdapter(this, galaxies, galaxyImageArray);
         gridView.setAdapter(adapter);
 //        spinner.setSelection(adapter.getCount());
 
@@ -55,7 +64,7 @@ public class SelectionActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent launchIntent = new Intent(SelectionActivity.this, DisplayActivity.class);
-                launchIntent.putExtra("imageName", galaxyArray.get(position).toString());
+                launchIntent.putExtra("imageName", galaxies[position]);
                 launchIntent.putExtra("imageVal", galaxyImageArray[position]);
                 startActivity(launchIntent);
             }

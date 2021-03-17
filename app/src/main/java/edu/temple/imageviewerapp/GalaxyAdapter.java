@@ -19,10 +19,11 @@ import java.util.ArrayList;
 public class GalaxyAdapter extends BaseAdapter {
 
     Context context;
-    ArrayList<String> items;
+    String[] items;
+    //ArrayList<String> items;
     int[] imageRes;
 
-    public GalaxyAdapter(Context context, ArrayList items, int[] imageRes){
+    public GalaxyAdapter(Context context, String[] items, int[] imageRes){
         this.context = context;
         this.items = items;
         this.imageRes = imageRes;
@@ -30,12 +31,12 @@ public class GalaxyAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return items.size();
+        return items.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return items.get(position);
+        return items[position];
     }
 
     // Ignore this for now.
@@ -77,7 +78,7 @@ public class GalaxyAdapter extends BaseAdapter {
         }
 
         linearLayout.setBackgroundResource(imageRes[position]);
-        textView.setText(items.get(position));
+        textView.setText(items[position]);
         textView.setGravity(Gravity.CENTER_HORIZONTAL);
         textView.setTextColor(Color.WHITE);
         textView.setShadowLayer(3, 3, 3, Color.BLACK);

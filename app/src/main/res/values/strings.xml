@@ -1,3 +1,15 @@
 <resources>
+    <string-array name="galaxies">
+        <item>Andromeda</item>
+        <item>Black Eye</item>
+        <item>Milky Way</item>
+        <item>Rocket</item>
+        <item>Nebula</item>
+        <item>Umbra</item>
+        <item>Inertia</item>
+        <item>Equinox</item>
+        <item>Solstice</item>
+    </string-array>
     <string name="app_name">ImageViewerApp</string>
+    <string name="select_directions">Select an Item!</string>
 </resources>
